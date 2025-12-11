@@ -1,0 +1,27 @@
+# ============================================================================
+# FILE: requirements.txt
+# ============================================================================
+# Backend dependencies for Content Writing Assistant Agent
+# Installation: pip install -r requirements.txt
+
+# Web Framework
+Flask==3.0.0
+Flask-CORS==4.0.0
+
+# AI/ML
+google-generativeai==0.3.2
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# HTTP/Requests
+requests==2.31.0
+
+# Development
+python-dotenv==1.0.0
+
+# Production WSGI Server (optional)
+gunicorn==21.2.0
+
+# For local testing
+pytest==7.4.3

@@ -1,0 +1,16 @@
+[build]
+# Use Nixpacks (Railway default) and install backend deps.
+builder = "NIXPACKS"
+buildCommand = "pip install -r backend/requirements.txt"
+
+[deploy]
+# Serve Flask app with Gunicorn. Railway sets PORT automatically.
+startCommand = "cd backend && gunicorn -b 0.0.0.0:$PORT main:app"
+restartPolicy = "on_failure"
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+
+[variables]
+PYTHON_VERSION = "3.11"
+FLASK_DEBUG = "False"
+
